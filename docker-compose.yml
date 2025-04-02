@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  cryptofox:
+    build:
+      context: .
+      dockerfile: "Dockerfile"
+      platforms:
+      - "linux/amd64"
+    # volumes:
+    #   - ./kraken_tickers.sqlite:/go/bin/cryptofox/kraken_tickers.sqlite
+    ports:
+      - "8081:8081"
